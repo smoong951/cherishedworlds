@@ -19,8 +19,6 @@ package com.illusivesoulworks.cherishedworlds;
 
 import com.illusivesoulworks.cherishedworlds.client.ScreenEventsListener;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.fml.IExtensionPoint;
-import net.neoforged.fml.ModLoadingContext;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
@@ -30,9 +28,6 @@ public class CherishedWorldsNeoForgeMod {
 
   public CherishedWorldsNeoForgeMod(IEventBus eventBus) {
     eventBus.addListener(this::setupClient);
-    ModLoadingContext.get().registerExtensionPoint(IExtensionPoint.DisplayTest.class,
-        () -> new IExtensionPoint.DisplayTest(() -> IExtensionPoint.DisplayTest.IGNORESERVERONLY,
-            (a, b) -> true));
   }
 
   private void setupClient(final FMLClientSetupEvent evt) {
