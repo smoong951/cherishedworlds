@@ -30,9 +30,11 @@ import net.minecraft.resources.ResourceLocation;
 public interface IFavoritesViewer<T extends Screen> {
 
   ResourceLocation STAR_ICON =
-      new ResourceLocation(CherishedWorldsConstants.MOD_ID, "textures/gui/staricon.png");
+      ResourceLocation.fromNamespaceAndPath(CherishedWorldsConstants.MOD_ID,
+          "textures/gui/staricon.png");
   ResourceLocation EMPTY_STAR_ICON =
-      new ResourceLocation(CherishedWorldsConstants.MOD_ID, "textures/gui/emptystaricon.png");
+      ResourceLocation.fromNamespaceAndPath(CherishedWorldsConstants.MOD_ID,
+          "textures/gui/emptystaricon.png");
 
   void init(T screen);
 
